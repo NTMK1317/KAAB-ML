@@ -1,0 +1,53 @@
+Namespace(
+
+agnostic_nms=False, 
+augment=False, 
+cfg='cfg/yolor_p6.cfg', 
+classes=None, 
+conf_thres=0.25, 
+device='cpu', 
+img_size=1280, 
+iou_thres=0.5, 
+names='data/coco.names', 
+output='inference/output', 
+save_txt=False, 
+source='inference/images/horse.jpg', 
+update=False, 
+view_img=False, 
+weights=['yolor_p6.pt'])
+
+C:\Users\Terminator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\torch\nn\functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  ..\c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+image 1/1 D:\gpu-yolor\inference\images\horse.jpg: 832x1280 1 persons, 1 horses, Done. (1.923s)
+Results saved to inference\output
+Done. (2.249s)
+
+
+python detect.py --source inference/images/horses.jpg --cfg cfg/yolor_p6.cfg --weights yolor_p6.pt --conf 0.25 --img-size 1280 --device cpu
+
+source		inference/images/horses.jpg
+cfg		cfg/yolor_p6.cfg
+weights		yolor_p6.pt
+conf		0.25
+img-size	1280
+device		cpu
+
+
+output
+source
+weights
+view_img
+save_txt
+img_size
+cfg
+names
+
+device
+
+augment
+conf_thres
+iou_thres
+classes
+agnostic_nms
+
+update
